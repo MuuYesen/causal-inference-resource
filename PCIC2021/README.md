@@ -1,4 +1,4 @@
-### WAIC 2022 黑客松九章云极赛道-因果学习和决策优化挑战赛
+### PCIC 2021 | 华为 & 北京大学因果推理挑战赛
 
 #### 一、竞赛主页
 https://competition.huaweicloud.com/information/1000041487/circumstance
