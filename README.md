@@ -1,6 +1,18 @@
 # causal-inference-resource
 
-### 一、如何使用
+
+### 一、相关竞赛
+
+#### 1、PCIC 2021
+华为 & 北京大学因果推理挑战赛
+
+#### 2、WAIC 2022
+黑客松九章云极赛道 - 因果学习和决策优化挑战赛
+
+#### 3、PCIC 2022
+华为 & 北京大学因果推理挑战赛
+
+### 二、如何使用
 
 #### 1、安装anaconda
 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
@@ -22,20 +34,7 @@ https://zhuanlan.zhihu.com/p/354912485
 D:\Learn_Software\anaconda3\envs\causal-inference-resource\Lib\site-packages\cdt\utils\Settings.py
 
 #### 5、环境搭建完成
-现在可以执行仓库内任一子目录的主函数，并得到结果
-
-
-
-### 二、相关竞赛
-
-#### 1、PCIC 2021
-华为 & 北京大学因果推理挑战赛
-
-#### 2、WAIC 2022
-黑客松九章云极赛道 - 因果学习和决策优化挑战赛
-
-#### 3、PCIC 2022
-
+执行仓库内任一子目录的主函数，尝试得到结果
 
 
 
