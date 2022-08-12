@@ -22,7 +22,7 @@ https://zhuanlan.zhihu.com/p/354912485
 D:\Learn_Software\anaconda3\envs\causal-inference-resource\Lib\site-packages\cdt\utils\Settings.py
 
 #### 5、环境搭建完成
-此时，可以正常执行仓库内任一子目录的主函数，并输出结果
+现在可以执行仓库内任一子目录的主函数，并得到结果
 
 
 
