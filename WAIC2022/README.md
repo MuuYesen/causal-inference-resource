@@ -10,3 +10,14 @@ https://tianchi.aliyun.com/competition/entrance/532019/information
 #### 三、赛题讲解直播回放
 https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&emsp;提取码：0c6s
 
+#### 四、当前方案进展
+
+0-baseline：
+
+| 方案      | 结果 | 分数 |
+| ----------- | ----------- | ----------- |
+| 0-baseline      | ce.csv       | 2.8975 |
+|             |   ce_ct_all.csv       | 3.3110 |
+|             |    ce_dml_csv        | 2.8193 |
+|    1-v1         |             | |
+|             |             | |
