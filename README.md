@@ -16,7 +16,7 @@ pip install -r requirements.txt
 #### 4、安装cdt所需的R包
 https://zhuanlan.zhihu.com/p/354912485
 
-其中，修改的文件应该是conda虚拟环境中的Setting.py， 比如：
+在这里，修改的文件应该是conda虚拟环境中的Setting.py， 比如：
 
 
 D:\Learn_Software\anaconda3\envs\causal-inference-resource\Lib\site-packages\cdt\utils\Settings.py
