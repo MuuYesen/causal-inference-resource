@@ -11,7 +11,7 @@ conda create -n causal-inference-resource python==3.7
 #### 3、安装其它依赖包
 conda activate causal-inference-resource
 
-pip install -r requirements.txt
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 #### 4、安装cdt所需的R包
 https://zhuanlan.zhihu.com/p/354912485
