@@ -12,8 +12,6 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 #### 四、当前方案进展
 
-0-baseline：
-
 | 方案      | 结果 | 分数 |
 | ----------- | ----------- | ----------- |
 | 0-baseline      | ce.csv       | 2.8975 |
