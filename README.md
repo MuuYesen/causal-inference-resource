@@ -18,7 +18,7 @@
 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
 
 #### 2、创建conda虚拟环境
-conda create -n causal-inference-resource python==3.7
+conda create -n causal-inference-resource python==3.7.12
 
 #### 3、安装其它依赖包
 conda activate causal-inference-resource
