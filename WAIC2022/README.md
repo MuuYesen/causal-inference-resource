@@ -24,10 +24,16 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 |             |             | |
 
 #### 五、参考资料
+##### Dowhy
+《Dowhy因果推断，简单教程》：https://mp.weixin.qq.com/s/p69Vzll7cxRxiSRtUiYb9g
+
 ##### ATE
 《大白话谈因果系列文章（二）因果效应估计及论文介绍》：https://zhuanlan.zhihu.com/p/397974913
 
 ##### DML
+
+《Econml仓库中的DML接口文档页面》：https://econml.azurewebsites.net/_autosummary/econml.dml.DML.html
+
 《【因果推断/uplift建模】Double Machine Learning(DML)》：https://zhuanlan.zhihu.com/p/401010271
 
 《因果推断——借微软EconML测试用DML和deepIV进行反事实预测实验（二十五）》：https://zhuanlan.zhihu.com/p/456080557
