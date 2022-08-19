@@ -22,3 +22,14 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 |             |    ce_0.1_0.046.csv         | 2.8359 |
 |    1-v1         |             | |
 |             |             | |
+
+#### 五、参考资料
+##### ATE
+《大白话谈因果系列文章（二）因果效应估计及论文介绍》：https://zhuanlan.zhihu.com/p/397974913
+
+##### DML
+《【因果推断/uplift建模】Double Machine Learning(DML)》：https://zhuanlan.zhihu.com/p/401010271
+《因果推断——借微软EconML测试用DML和deepIV进行反事实预测实验（二十五）》：https://zhuanlan.zhihu.com/p/456080557
+《前沿, 双重机器学习方法DML用于因果推断, 实现它的code是什么？》：https://www.shangyexinzhi.com/article/4904811.html
+《因果推断笔记——DML ：Double Machine Learning案例学习（十六）》：https://cloud.tencent.com/developer/article/1913968
+
