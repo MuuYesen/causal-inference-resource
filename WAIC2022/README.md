@@ -58,7 +58,7 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《断点回归（regression discontinuity design）学习笔记》：https://blog.csdn.net/claire_chen_jia/article/details/108857734
 
-#### 6 双重差分法 DID
+##### 6 双重差分法 DID
 
 《双重差分法（DID）的原理与实际应用》：https://zhuanlan.zhihu.com/p/400085535
 
