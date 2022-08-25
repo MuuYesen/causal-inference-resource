@@ -24,13 +24,11 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 |             |             | |
 
 #### 五、参考资料
-##### Dowhy
-《Dowhy因果推断，简单教程》：https://mp.weixin.qq.com/s/p69Vzll7cxRxiSRtUiYb9g
+##### 1 平均因果效应 ATE
 
-##### ATE
 《大白话谈因果系列文章（二）因果效应估计及论文介绍》：https://zhuanlan.zhihu.com/p/397974913
 
-##### DML
+##### 2 双重机器学习 DML
 
 《Econml仓库中的DML接口文档页面》：https://econml.azurewebsites.net/_autosummary/econml.dml.DML.html
 
@@ -42,3 +40,34 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《因果推断笔记——DML ：Double Machine Learning案例学习（十六）》：https://cloud.tencent.com/developer/article/1913968
 
+##### 3 因果森林 CF
+
+《当机器学习遇上因果推断》:https://cec.blog.caixin.com/archives/216372
+
+《【机器学习-因果推断】因果森林 causalForest 估计 HTE R语言官方案例2》：https://zhuanlan.zhihu.com/p/480466543
+
+《因果森林总结：基于树模型的异质因果效应估计》：https://zhuanlan.zhihu.com/p/448524822
+
+##### 4 工具变量 IV
+
+《因果推断简介之六：工具变量（instrumental variable）》：https://cosx.org/2013/08/causality6-instrumental-variable
+
+##### 5 断点回归 RDD
+
+《Stata: 断点回归 (RDD) 教程》：https://zhuanlan.zhihu.com/p/100524478
+
+《断点回归（regression discontinuity design）学习笔记》：https://blog.csdn.net/claire_chen_jia/article/details/108857734
+
+#### 6 双重差分法 DID
+
+《双重差分法（DID）的原理与实际应用》：https://zhuanlan.zhihu.com/p/400085535
+
+《双重差分法（DID）介绍》：https://zhuanlan.zhihu.com/p/48952513
+
+##### 7 其余的资料
+
+《Dowhy因果推断，简单教程》：https://mp.weixin.qq.com/s/p69Vzll7cxRxiSRtUiYb9g
+
+《被忽视的因果结构：为什么合理选择控制变量很重要？》：https://zhuanlan.zhihu.com/p/371216533
+
+《因果推断概要》：https://zhuanlan.zhihu.com/p/362587309
