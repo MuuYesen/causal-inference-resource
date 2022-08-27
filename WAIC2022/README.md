@@ -25,10 +25,6 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 #### 五、因果发现の参考资料
 
-《概述：马尔可夫边界、因果发现和因果推理》：https://mp.weixin.qq.com/s/SU61XQnlY8IX44FlQZzp2A
-
-《【翻译】机器学习的理论障碍及因果革命的七个希望》：https://zhuanlan.zhihu.com/p/49461195
-
 ##### 1 结构方程模型
 
 《Causal Models》：https://plato.stanford.edu/entries/causal-models/
@@ -49,6 +45,12 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 ##### 4 实际应用
 
 《因果发现在因子选择（特征选择）场景下的应用》：https://mp.weixin.qq.com/s/EOuo2rNzt4g01AI0JLn8PQ
+
+##### 5 其余的资料
+
+《概述：马尔可夫边界、因果发现和因果推理》：https://mp.weixin.qq.com/s/SU61XQnlY8IX44FlQZzp2A
+
+《【翻译】机器学习的理论障碍及因果革命的七个希望》：https://zhuanlan.zhihu.com/p/49461195
 
 #### 六、因果推理の参考资料
 ##### 1 平均因果效应 ATE
