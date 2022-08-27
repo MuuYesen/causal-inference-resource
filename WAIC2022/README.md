@@ -23,7 +23,7 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 |    1-v1         |             | |
 |             |             | |
 
-#### 五、参考资料
+#### 五、因果推理の参考资料
 ##### 1 平均因果效应 ATE
 
 《大白话谈因果系列文章（二）因果效应估计及论文介绍》：https://zhuanlan.zhihu.com/p/397974913
@@ -84,3 +84,5 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 《因果推断概要》：https://zhuanlan.zhihu.com/p/362587309
 
 《因果推理综述——《A Survey on Causal Inference》一文的总结和梳理》：https://www.cnblogs.com/caoyusang/p/13518354.html
+
+#### 六、因果发现の参考资料
