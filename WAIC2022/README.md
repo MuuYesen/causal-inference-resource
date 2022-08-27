@@ -64,6 +64,17 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《双重差分法（DID）介绍》：https://zhuanlan.zhihu.com/p/48952513
 
+##### 7 元学习 ML
+
+《想了解 Meta Learning? 这篇论文一定要读！》：https://juejin.cn/post/6844904116574011400
+
+##### 8 倾向性得分匹配法 PSM
+
+《倾向得分匹配法的详细解读》：https://zhuanlan.zhihu.com/p/299976222
+
+《从关联到逻辑：因果推断初探》：https://mp.weixin.qq.com/s/qGNP_XeyQYbrRerQCVR5Xg
+
+
 ##### 7 其余的资料
 
 《Dowhy因果推断，简单教程》：https://mp.weixin.qq.com/s/p69Vzll7cxRxiSRtUiYb9g
@@ -71,3 +82,5 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 《被忽视的因果结构：为什么合理选择控制变量很重要？》：https://zhuanlan.zhihu.com/p/371216533
 
 《因果推断概要》：https://zhuanlan.zhihu.com/p/362587309
+
+《因果推理综述——《A Survey on Causal Inference》一文的总结和梳理》：https://www.cnblogs.com/caoyusang/p/13518354.html
