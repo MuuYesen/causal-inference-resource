@@ -27,16 +27,26 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《概述：马尔可夫边界、因果发现和因果推理》：https://mp.weixin.qq.com/s/SU61XQnlY8IX44FlQZzp2A
 
+《【翻译】机器学习的理论障碍及因果革命的七个希望》：https://zhuanlan.zhihu.com/p/49461195
+
 ##### 1 结构方程模型
 
 《Causal Models》：https://plato.stanford.edu/entries/causal-models/
 
 《因果关系是什么？结构因果模型入门》：https://mp.weixin.qq.com/s/4g_dQSrr9bmxjkl1B3TLVg
 
+《基于时序数据的线性非高斯模型》：https://zhuanlan.zhihu.com/p/369722509
+
+《非时序线性非高斯模型 —— LiNGAM》：https://zhuanlan.zhihu.com/p/369720949
+
 ##### 2 图模型
 《基于约束学习的因果发现基础概念》：https://mp.weixin.qq.com/s/gqOpipOhUaRlPdB7f-1TvA
 
-##### 3 实际应用
+##### 3 点过程
+
+《R语言和Python用泊松过程扩展：霍克斯过程Hawkes Processes分析比特币交易数据订单到达自激过程时间序列》：https://zhuanlan.zhihu.com/p/488319642
+
+##### 4 实际应用
 
 《因果发现在因子选择（特征选择）场景下的应用》：https://mp.weixin.qq.com/s/EOuo2rNzt4g01AI0JLn8PQ
 
