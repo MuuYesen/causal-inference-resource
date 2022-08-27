@@ -42,6 +42,8 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《R语言和Python用泊松过程扩展：霍克斯过程Hawkes Processes分析比特币交易数据订单到达自激过程时间序列》：https://zhuanlan.zhihu.com/p/488319642
 
+《因果推理之霍克斯过程 Hawkes process》：https://dreamhomes.top/posts/202106241018/
+
 ##### 4 实际应用
 
 《因果发现在因子选择（特征选择）场景下的应用》：https://mp.weixin.qq.com/s/EOuo2rNzt4g01AI0JLn8PQ
