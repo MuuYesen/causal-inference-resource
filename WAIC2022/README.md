@@ -25,6 +25,14 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 #### 五、因果发现の参考资料
 
+《基于约束学习的因果发现基础概念》：https://mp.weixin.qq.com/s/gqOpipOhUaRlPdB7f-1TvA
+
+《因果关系是什么？结构因果模型入门》：https://mp.weixin.qq.com/s/4g_dQSrr9bmxjkl1B3TLVg
+
+《概述：马尔可夫边界、因果发现和因果推理》：https://mp.weixin.qq.com/s/SU61XQnlY8IX44FlQZzp2A
+
+《因果发现在因子选择（特征选择）场景下的应用》：https://mp.weixin.qq.com/s/EOuo2rNzt4g01AI0JLn8PQ
+
 #### 六、因果推理の参考资料
 ##### 1 平均因果效应 ATE
 
