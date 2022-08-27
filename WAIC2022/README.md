@@ -25,6 +25,8 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 #### 五、因果发现の参考资料
 
+《Causal Models》：https://plato.stanford.edu/entries/causal-models/
+
 《基于约束学习的因果发现基础概念》：https://mp.weixin.qq.com/s/gqOpipOhUaRlPdB7f-1TvA
 
 《因果关系是什么？结构因果模型入门》：https://mp.weixin.qq.com/s/4g_dQSrr9bmxjkl1B3TLVg
