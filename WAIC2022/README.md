@@ -99,7 +99,7 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《想了解 Meta Learning? 这篇论文一定要读！》：https://juejin.cn/post/6844904116574011400
 
-##### 8 增量模型 uplift
+##### 8 增量模型 Uplift
 
 《【Uplift】参考资料篇》：https://zhuanlan.zhihu.com/p/358582762
 
