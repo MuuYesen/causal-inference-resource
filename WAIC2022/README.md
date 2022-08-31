@@ -99,14 +99,29 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《想了解 Meta Learning? 这篇论文一定要读！》：https://juejin.cn/post/6844904116574011400
 
-##### 8 倾向性得分匹配法 PSM
+##### 8 增量模型 uplift
+
+《【Uplift】参考资料篇》：https://zhuanlan.zhihu.com/p/358582762
+
+《【Uplift】因果推断基础篇》：https://zhuanlan.zhihu.com/p/362311467
+
+《【Uplift】模拟数据篇》：https://zhuanlan.zhihu.com/p/362411150
+
+《【Uplift】建模方法篇>：https://zhuanlan.zhihu.com/p/362788755
+
+《【Uplift】评估方法篇》：https://zhuanlan.zhihu.com/p/363082639
+
+《【Uplift】特征选择篇》：https://zhuanlan.zhihu.com/p/363866684
+
+
+##### 9 倾向性得分匹配法 PSM
 
 《倾向得分匹配法的详细解读》：https://zhuanlan.zhihu.com/p/299976222
 
 《从关联到逻辑：因果推断初探》：https://mp.weixin.qq.com/s/qGNP_XeyQYbrRerQCVR5Xg
 
 
-##### 7 其余的资料
+##### 10 其余的资料
 
 《Dowhy因果推断，简单教程》：https://mp.weixin.qq.com/s/p69Vzll7cxRxiSRtUiYb9g
 
