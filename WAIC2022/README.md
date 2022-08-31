@@ -25,7 +25,7 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 #### 五、因果发现の参考资料
 
-##### 1 结构方程模型
+##### 1. 结构方程模型
 
 《Causal Models》：https://plato.stanford.edu/entries/causal-models/
 
@@ -35,31 +35,31 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《非时序线性非高斯模型 —— LiNGAM》：https://zhuanlan.zhihu.com/p/369720949
 
-##### 2 图模型
+##### 2. 图模型
 《基于约束学习的因果发现基础概念》：https://mp.weixin.qq.com/s/gqOpipOhUaRlPdB7f-1TvA
 
-##### 3 点过程
+##### 3. 点过程
 
 《R语言和Python用泊松过程扩展：霍克斯过程Hawkes Processes分析比特币交易数据订单到达自激过程时间序列》：https://zhuanlan.zhihu.com/p/488319642
 
 《因果推理之霍克斯过程 Hawkes process》：https://dreamhomes.top/posts/202106241018/
 
-##### 4 实际应用
+##### 4. 实际应用
 
 《因果发现在因子选择（特征选择）场景下的应用》：https://mp.weixin.qq.com/s/EOuo2rNzt4g01AI0JLn8PQ
 
-##### 5 其余的资料
+##### 5. 其余的资料
 
 《概述：马尔可夫边界、因果发现和因果推理》：https://mp.weixin.qq.com/s/SU61XQnlY8IX44FlQZzp2A
 
 《【翻译】机器学习的理论障碍及因果革命的七个希望》：https://zhuanlan.zhihu.com/p/49461195
 
 #### 六、因果推理の参考资料
-##### 1 平均因果效应 ATE
+##### 1. 平均因果效应 ATE
 
 《大白话谈因果系列文章（二）因果效应估计及论文介绍》：https://zhuanlan.zhihu.com/p/397974913
 
-##### 2 双重机器学习 DML
+##### 2. 双重机器学习 DML
 
 《Econml仓库中的DML接口文档页面》：https://econml.azurewebsites.net/_autosummary/econml.dml.DML.html
 
@@ -71,7 +71,7 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《因果推断笔记——DML ：Double Machine Learning案例学习（十六）》：https://cloud.tencent.com/developer/article/1913968
 
-##### 3 因果森林 CF
+##### 3. 因果森林 CF
 
 《当机器学习遇上因果推断》:https://cec.blog.caixin.com/archives/216372
 
@@ -79,27 +79,27 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《因果森林总结：基于树模型的异质因果效应估计》：https://zhuanlan.zhihu.com/p/448524822
 
-##### 4 工具变量 IV
+##### 4. 工具变量 IV
 
 《因果推断简介之六：工具变量（instrumental variable）》：https://cosx.org/2013/08/causality6-instrumental-variable
 
-##### 5 断点回归 RDD
+##### 5. 断点回归 RDD
 
 《Stata: 断点回归 (RDD) 教程》：https://zhuanlan.zhihu.com/p/100524478
 
 《断点回归（regression discontinuity design）学习笔记》：https://blog.csdn.net/claire_chen_jia/article/details/108857734
 
-##### 6 双重差分法 DID
+##### 6. 双重差分法 DID
 
 《双重差分法（DID）的原理与实际应用》：https://zhuanlan.zhihu.com/p/400085535
 
 《双重差分法（DID）介绍》：https://zhuanlan.zhihu.com/p/48952513
 
-##### 7 元学习 ML
+##### 7. 元学习 ML
 
 《想了解 Meta Learning? 这篇论文一定要读！》：https://juejin.cn/post/6844904116574011400
 
-##### 8 增量模型 Uplift
+##### 8. 增量模型 Uplift
 
 《【Uplift】参考资料篇》：https://zhuanlan.zhihu.com/p/358582762
 
@@ -114,14 +114,14 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 《【Uplift】特征选择篇》：https://zhuanlan.zhihu.com/p/363866684
 
 
-##### 9 倾向性得分匹配法 PSM
+##### 9. 倾向性得分匹配法 PSM
 
 《倾向得分匹配法的详细解读》：https://zhuanlan.zhihu.com/p/299976222
 
 《从关联到逻辑：因果推断初探》：https://mp.weixin.qq.com/s/qGNP_XeyQYbrRerQCVR5Xg
 
 
-##### 10 其余的资料
+##### 10. 其余的资料
 
 《Dowhy因果推断，简单教程》：https://mp.weixin.qq.com/s/p69Vzll7cxRxiSRtUiYb9g
 
