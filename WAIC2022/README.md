@@ -131,3 +131,4 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《因果推理综述——《A Survey on Causal Inference》一文的总结和梳理》：https://www.cnblogs.com/caoyusang/p/13518354.html
 
+《因果科学应用范式》：https://zhuanlan.zhihu.com/p/421540391
