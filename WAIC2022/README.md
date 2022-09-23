@@ -1,5 +1,3 @@
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
 ### WAIC 2022 黑客松九章云极赛道-因果学习和决策优化挑战赛
 
 #### 一、竞赛主页
@@ -135,6 +133,3 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 《因果科学应用范式》：https://zhuanlan.zhihu.com/p/421540391
 
-
-
-$\sqrt(2)$
