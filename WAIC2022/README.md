@@ -137,8 +137,4 @@ https://pan.baidu.com/wap/init?surl=Jsc3L1Sn4UJQvKdYzygWKQ         &emsp;&emsp;&
 
 
 
-$$
-
-\sqrt(2)
-
-$$
+$\sqrt(2)$
