@@ -16,15 +16,15 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 #### 四、迁移学习の参考资料
 
-##### 1. 仅源域样本【带标签】：基于因果 或 稳定学习
+##### 1. 仅源域样本【带标签】：比如 因果学习 或 稳定学习
 
 《Learning Causal Representations for Robust Domain Adaptation》：https://arxiv.org/abs/2011.06317
 
-##### 2. 同时源域样本【带标签】和目标域样本【无标签】：基于领域自适应
+##### 2. 同时源域样本【带标签】和目标域样本【无标签】：比如 领域自适应
 
 《Dual-Representation-Based Autoencoder for Domain Adaptation》：https://ieeexplore.ieee.org/abstract/document/9314101
 
-##### 3. 同时源域样本【带标签】和目标域样本【有标签】：基于参数微调
+##### 3. 同时源域样本【带标签】和目标域样本【有标签】：比如 参数微调
 
 《基于LSTM与迁移学习的滚动轴承故障诊断》：http://clgzk.qks.cqut.edu.cn/CN/abstract/abstract5417.shtml
 
