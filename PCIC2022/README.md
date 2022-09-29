@@ -16,7 +16,7 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 #### 四、迁移学习の参考资料
 
-##### 1. 仅源域样本【带标签】：基于因果
+##### 1. 仅源域样本【带标签】：基于因果 或 稳定学习
 
 《Learning Causal Representations for Robust Domain Adaptation》：https://arxiv.org/abs/2011.06317
 
