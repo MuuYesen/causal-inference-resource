@@ -13,6 +13,7 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 | 0-default      |             | |
 | 1-explore      |        |  |
 | 2-convlstm     |             | |
+| 3-causal_autoencoder            |             | |
 |             |             | |
 
 #### 四、迁移学习の参考资料
