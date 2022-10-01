@@ -10,8 +10,9 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 | 方案      | 结果 | 分数 |
 | ----------- | ----------- | ----------- |
-| 0-explore      |        |  |
-|    1-v1         |             | |
+| 0-default      |             | |
+| 1-explore      |        |  |
+| 2-convlstm     |             | |
 |             |             | |
 
 #### 四、迁移学习の参考资料

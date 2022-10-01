@@ -1,0 +1,48 @@
+{
+    "model_algorithm": "Alarms_classification",
+    "model_type": "PyTorch",
+    "runtime": "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64",
+    "metrics": {
+        "f1": 0,
+        "accuracy": 0,
+        "precision": 0,
+        "recall": 0
+    },
+    "apis": [
+        {
+            "procotol": "http",
+            "url": "/",
+            "method": "post",
+            "request": {
+                "Content-type": "multipart/form-data",
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "input": {"type": "file"}
+                    },
+                    "required": ["input"]
+                }
+            },
+            "response": {
+                "Content-type": "multipart/form-data",
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "result": {"type": "string"}
+                    },
+                    "required": ["result"]
+                }
+            }
+        }
+    ],
+    "dependencies": [
+        {
+            "installer": "pip",
+            "packages": [
+                {
+                    "package_name": "pandas"
+                }
+            ]
+        }
+    ]
+}
