@@ -1,10 +1,13 @@
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
-from tensorflow.keras.layers import RepeatVector, TimeDistributed
-from tensorflow.keras.layers import ConvLSTM2D, Flatten
+import numpy as np
+from sklearn.utils import class_weight
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES']='1'
+os.environ['CUDA_VISIBLE_DEVICES']='0'
+
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Activation
+from tensorflow.keras.layers import RepeatVector, TimeDistributed
+from tensorflow.keras.layers import ConvLSTM2D, Flatten
 
 import tensorflow as tf
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
@@ -23,7 +26,7 @@ class ConvLSTM(object):
         param_net['activation'] = 'relu'
         param_net['use_bias'] = True
         param_net['kernel_initializer'] = 'glorot_uniform'
-        param_net['data_format'] = None
+        param_net['data_format'] = 'channels_last'
         param_net['input_shape'] = input_shape
 
         self.param_net = param_net
@@ -36,24 +39,36 @@ class ConvLSTM(object):
                        use_bias=self.param_net['use_bias'], kernel_initializer=self.param_net['kernel_initializer'],
                        data_format=self.param_net['data_format'],
                        return_sequences=True))
-        seq.add(ConvLSTM2D(filters=self.param_net['filters'], kernel_size=self.param_net['kernel_size'], strides=(1,1),
-                           padding=self.param_net['padding'], activation=self.param_net['activation'], use_bias=self.param_net['use_bias'],
-                           kernel_initializer=self.param_net['kernel_initializer'], return_sequences=True))
+        seq.add(
+            ConvLSTM2D(filters=self.param_net['filters'], kernel_size=self.param_net['kernel_size'], strides=(1,1),
+                       padding=self.param_net['padding'], activation=self.param_net['activation'], use_bias=self.param_net['use_bias'],
+                       kernel_initializer=self.param_net['kernel_initializer'], return_sequences=True))
         seq.add(Flatten())
         seq.add(RepeatVector(1))
         seq.add(LSTM(200, activation='relu', return_sequences=True))
         seq.add(TimeDistributed(Dense(100, activation='relu')))
         seq.add(TimeDistributed(Dense(1)))
-
+        seq.add(Flatten())
+        seq.add(Dense(1))
+        seq.add(Activation('sigmoid'))
         self.model = seq
 
-    def train(self, X_train, Y_train):
-        self.model.compile(loss='mse', optimizer='adam')
-        self.model.fit(X_train, Y_train, batch_size=16, epochs=100, verbose=1)
+    def train(self, X_train, Y_train, X_test, Y_test):
+        cw = class_weight.compute_class_weight(class_weight='balanced',
+                                               classes=np.unique(Y_train),
+                                               y=Y_train)
+        cw = dict(enumerate(cw))
+
+        self.model.compile(
+            loss='binary_crossentropy',
+            optimizer='adam')
+
+        self.model.fit(X_train, Y_train, validation_data=(X_test, Y_test),
+                      class_weight=cw, batch_size=16, epochs=100, verbose=1)
         return self
 
     def predict(self, X_test):
-        Y_pre = self.model.predict(X_test)
+        Y_pre = self.model.predict(X_test).reshape(-1)
         return Y_pre
 
     def save(self, checkpoint):
