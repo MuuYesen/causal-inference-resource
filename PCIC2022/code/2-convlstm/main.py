@@ -56,6 +56,7 @@ def main_strategy_2():
     model_train_data, model_train_label = processer.fit(raw_train_data, raw_train_label)
     model_test_data, model_test_label = processer.transform(raw_test_data, raw_test_label)
 
+    model = ConvLSTM(model_train_data.shape[1:])
     model.transfer(model_train_data, model_train_label,
                    model_test_data, model_test_label)
 
