@@ -139,8 +139,8 @@ if __name__ == '__main__':
 
     tmp_train_data, tmp_train_label = raw_train_data, raw_train_label
 
-    tmp_train_data = pro_train.reshape(raw_train_data, 0)
-    tmp_train_data, tmp_train_label = clean_label(tmp_train_data, raw_train_label)
+    tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    tmp_train_data, tmp_train_label = clean_label(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     np.save('./result/0-clean_label.npy', tmp_train_data)
 
