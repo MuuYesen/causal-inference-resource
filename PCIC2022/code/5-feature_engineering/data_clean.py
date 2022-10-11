@@ -80,6 +80,7 @@ def clean_label(raw_data, raw_label):
 
 def clean_outlier(raw_data, raw_label):
     from pyod.models.ecod import ECOD
+
     clf = ECOD()
     clf.fit(raw_data)
 
@@ -111,18 +112,22 @@ def set_discrete(raw_data, raw_label):
 
 def set_normalized(raw_data, raw_label):
     from sklearn.preprocessing import MinMaxScaler
+
     min_max_scaler = MinMaxScaler(feature_range=[0, 1])
     temp_data = min_max_scaler.fit_transform(raw_data)
+
     return temp_data, raw_label
 
 
 def under_sampling(raw_data, raw_label):
     from collections import Counter
     from imblearn.under_sampling import CondensedNearestNeighbour
+
     print('Original dataset shape %s' % Counter(raw_label))
     cnn = CondensedNearestNeighbour(random_state=42)
     temp_data, temp_label = cnn.fit_resample(raw_data, raw_label)
     print('Resampled dataset shape %s' % Counter(temp_label))
+
     return temp_data, temp_label
 
 
