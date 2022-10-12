@@ -213,29 +213,28 @@ def generate_train(raw_train_data, raw_train_label):
     np.save('./result/train/2-clean_feature_outlier.npy', tmp_train_data)
 
     tmp_train_data = np.load('./result/train/2-clean_feature_outlier.npy')  #
-    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    # tmp_train_data, tmp_train_label = set_discrete(tmp_train_data, tmp_train_label)
-    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/3-set_discrete.npy', tmp_train_data)
-
-    tmp_train_data = np.load('./result/train/3-set_discrete.npy')  #
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = set_normalized(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/4-set_normalized.npy', tmp_train_data)
+    np.save('./result/train/3-set_normalized.npy', tmp_train_data)
 
-    tmp_train_data = np.load('./result/train/4-set_normalized.npy')
+    tmp_train_data = np.load('./result/train/3-set_normalized.npy')
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = under_sampling(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/5-under_sampling.npy', tmp_train_data)
+    np.save('./result/train/4-under_sampling.npy', tmp_train_data)
 
-    tmp_train_data = np.load('./result/train/5-under_sampling.npy')
+    # tmp_train_data = np.load('./result/train/4-under_sampling.npy')
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     # tmp_train_data = extract_feature(tmp_train_data)
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/6-extract_feature.npy', tmp_train_data)
+    # np.save('./result/train/5-extract_feature.npy', tmp_train_data)
 
+    # tmp_train_data = np.load('./result/train/5-extract_feature.npy')  #
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    # tmp_train_data, tmp_train_label = set_discrete(tmp_train_data, tmp_train_label)
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    # np.save('./result/train/6-set_discrete.npy', tmp_train_data)
 
 def generate_test(raw_test_data, dirname):
     pro_test = Processer()
@@ -248,17 +247,16 @@ def generate_test(raw_test_data, dirname):
     np.save(f'./result/test/{dirname}/0-clean_feature_outlier.npy', tmp_test_data)
 
     tmp_test_data = np.load(f'./result/test/{dirname}/0-clean_feature_outlier.npy',)
-    # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
-    # tmp_test_data, _ = set_discrete(tmp_test_data, None)
-    # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
-    np.save(f'./result/test/{dirname}/1-set_discrete.npy', tmp_test_data)
-
-    tmp_test_data = np.load(f'./result/test/{dirname}/1-set_discrete.npy',)
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
     tmp_test_data, _ = set_normalized(tmp_test_data, None)
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
-    np.save(f'./result/test/{dirname}/2-set_normalized.npy', tmp_test_data)
+    np.save(f'./result/test/{dirname}/1-set_normalized.npy', tmp_test_data)
 
+    # tmp_test_data = np.load(f'./result/test/{dirname}/1-set_normalized.npy',)
+    # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    # tmp_test_data, _ = set_discrete(tmp_test_data, None)
+    # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    # np.save(f'./result/test/{dirname}/2-set_discrete.npy', tmp_test_data)
 
 if __name__ == '__main__':
 
