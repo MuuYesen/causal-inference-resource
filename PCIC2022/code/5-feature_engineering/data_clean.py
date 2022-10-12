@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 
@@ -20,12 +21,16 @@ class Processer:
         self.raw_samples = None
         self.raw_rows = None
         self.raw_cols = None
+        self.mode = None
 
     def reshape(self, raw_data, mode):
 
         if len(raw_data.shape) == 2:
             # n, m
-            res = raw_data.reshape(-1, self.raw_rows, self.raw_cols)
+            if mode == 0:
+                res = raw_data.reshape(-1, self.raw_rows, self.raw_cols)
+            else:
+                res = raw_data.reshape(self.samples, self.raw_rows, -1)
             self.raw_samples = res.shape[0]
             self.raw_rows = res.shape[1]
             self.raw_cols = res.shape[2]
@@ -78,7 +83,7 @@ def clean_label(raw_data, raw_label):
     return raw_data[indices], raw_label[indices]
 
 
-def clean_outlier(raw_data, raw_label):
+def clean_sample_outlier(raw_data, raw_label):
     from pyod.models.ecod import ECOD
 
     clf = ECOD()
@@ -92,7 +97,48 @@ def clean_outlier(raw_data, raw_label):
     return raw_data[indices], raw_label[indices]
 
 
-def set_discrete(raw_data, raw_label):
+def clean_feature_outlier(raw_data, raw_label):  #
+    temp_data = raw_data.copy()
+
+    file_name = './result/train/model_feature_outlier.csv'
+    if not os.path.exists(file_name):
+        model = pd.DataFrame()
+        for i in range(temp_data.shape[1]):
+            print('i=', i)
+            cur_data = temp_data[:, i]
+
+            fare_q3 = np.quantile(cur_data, q=0.75)
+            fare_q1 = np.quantile(cur_data, q=0.25)
+            fare_iqr = fare_q3 - fare_q1
+            fare_up_limit = fare_q3 + 1.5 * fare_iqr
+            fare_low_limit = fare_q1 - 1.5 * fare_iqr
+
+            model_dict = {}
+            model_dict['fare_up_limit'], model_dict['fare_low_limit'] = fare_up_limit, fare_low_limit
+            model = model.append(model_dict, ignore_index=True)
+
+            up_outlier = cur_data > fare_up_limit
+            low_outlier = cur_data < fare_low_limit
+            temp_data[up_outlier, i] = fare_up_limit
+            temp_data[low_outlier, i] = fare_low_limit
+
+        model.to_csv(file_name, index=False)
+    else:
+        model = pd.read_csv(file_name)
+        for i in range(temp_data.shape[1]):
+            print('i=', i)
+            fare_up_limit, fare_low_limit = model.loc[i, 'fare_up_limit'], model.loc[i, 'fare_low_limit']
+            cur_data = temp_data[:, i]
+
+            up_outlier = cur_data > fare_up_limit
+            low_outlier = cur_data < fare_low_limit
+            temp_data[up_outlier, i] = fare_up_limit
+            temp_data[low_outlier, i] = fare_low_limit
+
+    return temp_data, raw_label
+
+
+def set_discrete(raw_data, raw_label):  #
     from discreter import cont_var_bin, cont_var_bin_map
 
     temp_raw_data = pd.DataFrame(raw_data, columns=[str(i) for i in range(raw_data.shape[1])])
@@ -110,11 +156,19 @@ def set_discrete(raw_data, raw_label):
     return np.array(result).T, raw_label
 
 
-def set_normalized(raw_data, raw_label):
+def set_normalized(raw_data, raw_label):  #
+    import pickle
     from sklearn.preprocessing import MinMaxScaler
 
-    min_max_scaler = MinMaxScaler(feature_range=[0, 1])
-    temp_data = min_max_scaler.fit_transform(raw_data)
+    file_name = './result/train/model_set_normalized.sav'
+    if not os.path.exists(file_name):
+        min_max_scaler = MinMaxScaler(feature_range=[0, 1])
+        min_max_scaler.fit(raw_data)
+        pickle.dump(min_max_scaler, open(file_name, 'wb'))
+    else:
+        min_max_scaler = pickle.load(open(file_name, 'rb'))
+
+    temp_data = min_max_scaler.transform(raw_data)
 
     return temp_data, raw_label
 
@@ -136,45 +190,93 @@ def extract_feature(raw_data):
     pass
 
 
-if __name__ == '__main__':
-
-    raw_train_data = np.load('../../data/example/cityA/X.npy')
-    raw_train_label = np.load('../../data/example/cityA/Y.npy')
+def generate_train(raw_train_data, raw_train_label):
     pro_train = Processer()
 
     tmp_train_data, tmp_train_label = raw_train_data, raw_train_label
 
-    tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    tmp_train_data, tmp_train_label = clean_label(tmp_train_data, tmp_train_label)
-    tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/0-clean_label.npy', tmp_train_data)
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    # tmp_train_data, tmp_train_label = clean_label(tmp_train_data, tmp_train_label)
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    np.save('./result/train/0-clean_label.npy', tmp_train_data)
 
-    tmp_train_data = np.load('./result/0-clean_label.npy')
+    tmp_train_data = np.load('./result/train/0-clean_label.npy')
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    tmp_train_data, tmp_train_label = clean_outlier(tmp_train_data, tmp_train_label)
+    tmp_train_data, tmp_train_label = clean_sample_outlier(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/1-clean_outlier.npy', tmp_train_data)
+    np.save('./result/train/1-clean_sample_outlier.npy', tmp_train_data)
 
-    tmp_train_data = np.load('./result/1-clean_outlier.npy')
+    tmp_train_data = np.load('./result/train/1-clean_sample_outlier.npy')  #
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    tmp_train_data, tmp_train_label = set_discrete(tmp_train_data, tmp_train_label)
+    tmp_train_data, tmp_train_label = clean_feature_outlier(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/2-set_discrete.npy', tmp_train_data)
+    np.save('./result/train/2-clean_feature_outlier.npy', tmp_train_data)
 
-    tmp_train_data = np.load('./result/2-set_discrete.npy')
+    tmp_train_data = np.load('./result/train/2-clean_feature_outlier.npy')  #
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    # tmp_train_data, tmp_train_label = set_discrete(tmp_train_data, tmp_train_label)
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    np.save('./result/train/3-set_discrete.npy', tmp_train_data)
+
+    tmp_train_data = np.load('./result/train/3-set_discrete.npy')  #
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = set_normalized(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/3-set_normalized.npy', tmp_train_data)
+    np.save('./result/train/4-set_normalized.npy', tmp_train_data)
 
-    tmp_train_data = np.load('./result/3-set_normalized.npy')
+    tmp_train_data = np.load('./result/train/4-set_normalized.npy')
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = under_sampling(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/4-under_sampling.npy', tmp_train_data)
+    np.save('./result/train/5-under_sampling.npy', tmp_train_data)
 
-    tmp_train_data = np.load('./result/4-under_sampling.npy')
+    tmp_train_data = np.load('./result/train/5-under_sampling.npy')
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     # tmp_train_data = extract_feature(tmp_train_data)
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/5-extract_feature.npy', tmp_train_data)
+    np.save('./result/train/6-extract_feature.npy', tmp_train_data)
+
+
+def generate_test(raw_test_data, dirname):
+    pro_test = Processer()
+
+    tmp_test_data = raw_test_data
+
+    tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    tmp_test_data, _ = clean_feature_outlier(tmp_test_data, None)
+    tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    np.save(f'./result/test/{dirname}/0-clean_feature_outlier.npy', tmp_test_data)
+
+    tmp_test_data = np.load(f'./result/test/{dirname}/0-clean_feature_outlier.npy',)
+    # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    # tmp_test_data, _ = set_discrete(tmp_test_data, None)
+    # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    np.save(f'./result/test/{dirname}/1-set_discrete.npy', tmp_test_data)
+
+    tmp_test_data = np.load(f'./result/test/{dirname}/1-set_discrete.npy',)
+    tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    tmp_test_data, _ = set_normalized(tmp_test_data, None)
+    tmp_test_data = pro_test.reshape(tmp_test_data, 0)
+    np.save(f'./result/test/{dirname}/2-set_normalized.npy', tmp_test_data)
+
+
+if __name__ == '__main__':
+
+    raw_data = np.load('../../data/example/cityA/X.npy')
+    raw_label = np.load('../../data/example/cityA/Y.npy')
+
+    from sklearn.model_selection import train_test_split
+    raw_train_data, raw_test_data, raw_train_label, raw_test_label = train_test_split(
+      raw_data,
+      raw_label,
+      test_size=0.3,
+      random_state=0
+    )
+
+    generate_train(raw_train_data, raw_train_label)
+    generate_test(raw_test_data, dirname='cityA')
+
+    city_b_data = np.load('../../data/example/cityB/X.npy')
+    city_b_label = np.load('../../data/example/cityB/Y.npy')
+
+    generate_test(city_b_data, dirname='cityB')
