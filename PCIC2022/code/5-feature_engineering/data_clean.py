@@ -198,31 +198,32 @@ def generate_train(raw_train_data, raw_train_label):
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = clean_label(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/0-clean_label.npy', tmp_train_data)
+    # np.save('./result/train/0-clean_label.npy', tmp_train_data)
 
     # tmp_train_data = np.load('./result/train/0-clean_label.npy')
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = clean_sample_outlier(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/1-clean_sample_outlier.npy', tmp_train_data)
+    # np.save('./result/train/1-clean_sample_outlier.npy', tmp_train_data)
 
     # tmp_train_data = np.load('./result/train/1-clean_sample_outlier.npy')  #
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = clean_feature_outlier(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/2-clean_feature_outlier.npy', tmp_train_data)
+    # np.save('./result/train/2-clean_feature_outlier.npy', tmp_train_data)
 
     # tmp_train_data = np.load('./result/train/2-clean_feature_outlier.npy')  #
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = set_normalized(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/3-set_normalized.npy', tmp_train_data)
+    # np.save('./result/train/3-set_normalized.npy', tmp_train_data)
 
     # tmp_train_data = np.load('./result/train/3-set_normalized.npy')
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = under_sampling(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     np.save('./result/train/4-under_sampling.npy', tmp_train_data)
+    np.save('./result/train/4-label.npy', tmp_train_label)
 
     # tmp_train_data = np.load('./result/train/4-under_sampling.npy')
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
@@ -244,7 +245,7 @@ def generate_test(raw_test_data, dirname):
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
     tmp_test_data, _ = clean_feature_outlier(tmp_test_data, None)
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
-    np.save(f'./result/test/{dirname}/0-clean_feature_outlier.npy', tmp_test_data)
+    # np.save(f'./result/test/{dirname}/0-clean_feature_outlier.npy', tmp_test_data)
 
     # tmp_test_data = np.load(f'./result/test/{dirname}/0-clean_feature_outlier.npy',)
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
