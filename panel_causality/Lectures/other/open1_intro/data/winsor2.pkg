@@ -1,0 +1,18 @@
+d 'WINSOR2': module to winsorize data
+d
+d    winsor2 can winsorize a varlist, operate with the by prefix,
+d and offers a replace option. 
+d
+d KW: winsor
+d KW: winsorize
+d KW: data management
+d
+d Requires: Stata version 8
+d
+d Distribution-Date: 20201125
+d
+d Author: Yujun Lian, Department of Finance, Sun Yat-Sen University, China
+d Support: email arlionn@@163.com
+d
+f winsor2.ado
+f winsor2.sthlp
