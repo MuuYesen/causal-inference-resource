@@ -1,4 +1,4 @@
-# causal-inference-resource
+# 因果推断竞赛
 
 
 ### 一、相关竞赛
