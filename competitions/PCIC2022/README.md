@@ -26,7 +26,7 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 《Dual-Representation-Based Autoencoder for Domain Adaptation》：https://ieeexplore.ieee.org/abstract/document/9314101
 
-##### 3. 同时源域样本【带标签】和目标域样本【有标签】：比如 参数微调
+##### 3. 同时源域样本【带标签】和目标域样本【有标签】：比如 参数微调、领域自适应
 
 《基于LSTM与迁移学习的滚动轴承故障诊断》：http://clgzk.qks.cqut.edu.cn/CN/abstract/abstract5417.shtml
 
