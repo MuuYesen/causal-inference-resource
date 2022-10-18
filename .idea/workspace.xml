@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="367b5b6e-4fdf-4c40-a4f4-63a617f10fdd" name="Changes" comment="update a requirements.txt">
-      <change beforePath="$PROJECT_DIR$/competitions/PCIC2022/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/competitions/PCIC2022/README.md" afterDir="false" />
+    <list default="true" id="367b5b6e-4fdf-4c40-a4f4-63a617f10fdd" name="Changes" comment="update a result of data_clean.py">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/test/cityA/0-clean_feature_outlier.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/test/cityA/1-set_normalized.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/test/cityB/0-clean_feature_outlier.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/test/cityB/1-set_normalized.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/train/0-clean_label.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/train/1-clean_sample_outlier.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/train/2-clean_feature_outlier.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/train/3-set_normalized.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/train/4-under_sampling.npy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/train/model_feature_outlier.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering/result/train/model_set_normalized.sav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +45,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/competitions/PCIC2022" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -42,6 +53,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference\competitions\PCIC2022\code\5-feature_engineering" />
       <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference\competitions\PCIC2022" />
       <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference\competitions\PCIC2022\code\0-default" />
       <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference" />
@@ -59,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666012374053</updated>
       <workItem from="1666012375839" duration="355000" />
-      <workItem from="1666056451678" duration="4743000" />
+      <workItem from="1666056451678" duration="5054000" />
     </task>
     <task id="LOCAL-00001" summary="add a dir of panel causality">
       <created>1666012476025</created>
@@ -103,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666062656995</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update a requirements.txt">
+      <created>1666062776393</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666062776393</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update a result of data_clean.py">
+      <created>1666063067174</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666063067174</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +154,7 @@
     <MESSAGE value="add a baseline in 0-default dir." />
     <MESSAGE value="add a readme.md in PCIC2022." />
     <MESSAGE value="update a requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="update a requirements.txt" />
+    <MESSAGE value="update a result of data_clean.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="update a result of data_clean.py" />
   </component>
 </project>
