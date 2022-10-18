@@ -30,6 +30,8 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 《基于LSTM与迁移学习的滚动轴承故障诊断》：http://clgzk.qks.cqut.edu.cn/CN/abstract/abstract5417.shtml
 
+《Time-Series Domain Adaptation via Sparse Associative Structure Alignment: Learning Invariance and Variance》：https://arxiv.org/abs/2205.03554
+
 ##### 4. 其余的资料
 
 《迁移学习简介与分类》：https://zhuanlan.zhihu.com/p/436377664
