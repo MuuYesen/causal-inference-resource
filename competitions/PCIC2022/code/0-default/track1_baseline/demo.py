@@ -3,7 +3,7 @@
 import os
 from sasa.estimator import SASA_Classiffer
 
-
+1
 if __name__ == '__main__':
     # data path
     src_train_path = os.path.join("../../../data/train/cityA/X.npy")
