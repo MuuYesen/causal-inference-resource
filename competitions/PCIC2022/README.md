@@ -10,7 +10,7 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 | 方案      | 结果 | 分数 |
 | ----------- | ----------- | ----------- |
-| 0-default      |             | |
+| 0-default      |             | 0.62 |
 | 1-explore      |        |  |
 | 2-convlstm     |             | |
 | 3-causal_autoencoder            |             | |
