@@ -18,7 +18,7 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 #### 四、迁移学习の参考资料
 
-##### 1. 仅源域样本【带标签】：比如 因果学习 或 稳定学习
+##### 1. 仅源域样本【带标签】：比如 因果学习、稳定学习、特殊领域自适应
 
 《Learning Causal Representations for Robust Domain Adaptation》：https://arxiv.org/abs/2011.06317
 
@@ -26,11 +26,16 @@ Given a dataset, build a transfer learning solution using the labeled source sam
 
 《Dual-Representation-Based Autoencoder for Domain Adaptation》：https://ieeexplore.ieee.org/abstract/document/9314101
 
+《Time Series Domain Adaptation via Sparse Associative Structure Alignment》：https://arxiv.org/abs/2012.11797
+
+《Time-Series Domain Adaptation via Sparse Associative Structure Alignment: Learning Invariance and Variance》：https://arxiv.org/abs/2205.03554
+
 ##### 3. 同时源域样本【带标签】和目标域样本【有标签】：比如 参数微调、有监督领域自适应
 
 《基于LSTM与迁移学习的滚动轴承故障诊断》：http://clgzk.qks.cqut.edu.cn/CN/abstract/abstract5417.shtml
 
-《Time-Series Domain Adaptation via Sparse Associative Structure Alignment: Learning Invariance and Variance》：https://arxiv.org/abs/2205.03554
+《Transferable Time-Series Forecasting under Causal Conditional Shift》：https://arxiv.org/abs/2111.03422
+
 
 ##### 4. 其余的资料
 
