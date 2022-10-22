@@ -183,6 +183,9 @@ class SASA_Classiffer(object):
             optimizer.step()
             global_step += 1
 
+            print("global_steps", global_step, "total_loss",
+                  batch_total_loss.detach().cpu().numpy())
+
             if global_step % 50 == 0:
                 print("global_steps", global_step, "total_loss",
                       batch_total_loss.detach().cpu().numpy())

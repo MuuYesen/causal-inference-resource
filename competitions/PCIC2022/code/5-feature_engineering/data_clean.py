@@ -77,7 +77,6 @@ def clean_label(raw_data, raw_label):
 
     indices = doubt.get_indices(raw_data, raw_label)
     print(len(indices))
-    print(indices)
     # print(doubt.get_predicates(raw_data, raw_label))
 
     return raw_data[indices], raw_label[indices]
@@ -86,15 +85,26 @@ def clean_label(raw_data, raw_label):
 def clean_sample_outlier(raw_data, raw_label):
     from pyod.models.ecod import ECOD
 
+    pos_data = raw_data[raw_label == 1]
+    pos_label = raw_label[raw_label == 1]
+    neg_data = raw_data[raw_label == 0]
+    neg_label = raw_label[raw_label == 0]
+
+    print(len(pos_data), len(neg_data))
+
     clf = ECOD()
-    clf.fit(raw_data)
+    clf.fit(neg_data)
 
     y_train_scores = clf.decision_scores_
     print(y_train_scores)
     print(clf.labels_)
 
     indices = np.argwhere(clf.labels_ == 0).reshape(-1)
-    return raw_data[indices], raw_label[indices]
+
+    fina_data = np.concatenate([pos_data, neg_data[indices]])
+    fina_label = np.concatenate([pos_label, neg_label[indices]])
+
+    return fina_data, fina_label
 
 
 def clean_feature_outlier(raw_data, raw_label):  #
@@ -195,48 +205,50 @@ def generate_train(raw_train_data, raw_train_label):
 
     tmp_train_data, tmp_train_label = raw_train_data, raw_train_label
 
-    tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    tmp_train_data, tmp_train_label = clean_label(tmp_train_data, tmp_train_label)
-    tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/0-clean_label.npy', tmp_train_data)
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    # tmp_train_data, tmp_train_label = clean_label(tmp_train_data, tmp_train_label)
+    # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
+    # np.save('./result/train/cityA/0-clean_label.npy', tmp_train_data)
 
-    # tmp_train_data = np.load('./result/train/0-clean_label.npy')
+    # tmp_train_data = np.load('./result/train/cityA/0-clean_label.npy')
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = clean_sample_outlier(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/1-clean_sample_outlier.npy', tmp_train_data)
+    # np.save('./result/train/cityA/1-clean_sample_outlier.npy', tmp_train_data)
 
-    # tmp_train_data = np.load('./result/train/1-clean_sample_outlier.npy')  #
+    # tmp_train_data = np.load('./result/train/cityA/1-clean_sample_outlier.npy')  #
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = clean_feature_outlier(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/2-clean_feature_outlier.npy', tmp_train_data)
+    # np.save('./result/train/cityA/2-clean_feature_outlier.npy', tmp_train_data)
 
-    # tmp_train_data = np.load('./result/train/2-clean_feature_outlier.npy')  #
+    # tmp_train_data = np.load('./result/train/cityA/2-clean_feature_outlier.npy')  #
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = set_normalized(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/3-set_normalized.npy', tmp_train_data)
+    # np.save('./result/train/cityA/3-set_normalized.npy', tmp_train_data)
 
-    # tmp_train_data = np.load('./result/train/3-set_normalized.npy')
+    # tmp_train_data = np.load('./result/train/cityA/3-set_normalized.npy')
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     tmp_train_data, tmp_train_label = under_sampling(tmp_train_data, tmp_train_label)
     tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    np.save('./result/train/4-under_sampling.npy', tmp_train_data)
+    # np.save('./result/train/cityA/4-under_sampling.npy', tmp_train_data)
 
-    # tmp_train_data = np.load('./result/train/4-under_sampling.npy')
+    # tmp_train_data = np.load('./result/train/cityA/4-under_sampling.npy')
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     # tmp_train_data = extract_feature(tmp_train_data)
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    # np.save('./result/train/5-extract_feature.npy', tmp_train_data)
+    # np.save('./result/train/cityA/5-extract_feature.npy', tmp_train_data)
 
-    # tmp_train_data = np.load('./result/train/5-extract_feature.npy')  #
+    # tmp_train_data = np.load('./result/train/cityA/5-extract_feature.npy')  #
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
     # tmp_train_data, tmp_train_label = set_discrete(tmp_train_data, tmp_train_label)
     # tmp_train_data = pro_train.reshape(tmp_train_data, 0)
-    # np.save('./result/train/6-set_discrete.npy', tmp_train_data)
+    # np.save('./result/train/cityA/6-set_discrete.npy', tmp_train_data)
 
-def generate_test(raw_test_data, dirname):
+    return tmp_train_data, tmp_train_label
+
+def generate_test(raw_test_data):
     pro_test = Processer()
 
     tmp_test_data = raw_test_data
@@ -244,37 +256,34 @@ def generate_test(raw_test_data, dirname):
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
     tmp_test_data, _ = clean_feature_outlier(tmp_test_data, None)
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
-    np.save(f'./result/test/{dirname}/0-clean_feature_outlier.npy', tmp_test_data)
 
-    # tmp_test_data = np.load(f'./result/test/{dirname}/0-clean_feature_outlier.npy',)
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
     tmp_test_data, _ = set_normalized(tmp_test_data, None)
     tmp_test_data = pro_test.reshape(tmp_test_data, 0)
-    np.save(f'./result/test/{dirname}/1-set_normalized.npy', tmp_test_data)
 
-    # tmp_test_data = np.load(f'./result/test/{dirname}/1-set_normalized.npy',)
     # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
     # tmp_test_data, _ = set_discrete(tmp_test_data, None)
     # tmp_test_data = pro_test.reshape(tmp_test_data, 0)
-    # np.save(f'./result/test/{dirname}/2-set_discrete.npy', tmp_test_data)
+
+    return tmp_test_data
 
 if __name__ == '__main__':
 
     raw_data = np.load('../../data/train/cityA/X.npy')
     raw_label = np.load('../../data/train/cityA/Y.npy')
+    res_data, res_label = generate_train(raw_data, raw_label)
 
-    from sklearn.model_selection import train_test_split
-    raw_train_data, raw_test_data, raw_train_label, raw_test_label = train_test_split(
-      raw_data,
-      raw_label,
-      test_size=0.3,
-      random_state=0
-    )
-
-    generate_train(raw_train_data, raw_train_label)
-    generate_test(raw_test_data, dirname='cityA')
+    np.save('./result/train/cityA/X.npy', res_data)
+    np.save('./result/train/cityA/Y.npy', res_label)
 
     city_b_data = np.load('../../data/train/cityB/train/X.npy')
     city_b_label = np.load('../../data/train/cityB/train/Y.npy')
+    res_data = generate_test(city_b_data)
 
-    generate_test(city_b_data, dirname='cityB')
+    np.save('./result/train/cityB/X.npy', res_data)
+    np.save('./result/train/cityB/Y.npy', city_b_label)
+
+    test_b_data = np.load('../../data/train/cityB/train/X.npy')
+    res_data = generate_test(test_b_data)
+
+    np.save('./result/test/X.npy', res_data)
