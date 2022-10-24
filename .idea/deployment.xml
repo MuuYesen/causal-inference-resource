@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="zengxm@60.28.101.143:41522 password" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="root@43.142.109.196">
         <serverdata>
@@ -9,13 +9,14 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="zengxm@103.90.179.251:41522 password">
+      <paths name="zengxm@60.28.101.143:41522 password">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$/competitions" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
