@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d420e321-51cd-4127-bdab-42abee585b3d" name="Changes" comment="update the dir of cross-section">
+    <list default="true" id="d420e321-51cd-4127-bdab-42abee585b3d" name="Changes" comment="update the dir of competitions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cross_sectional_causality/causal_discovery/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cross_sectional_causality/causal_inference/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cross_sectional_causality/markov_blanket/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,7 @@
       <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference\panel_causality\Lectures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference\panel_causality\books" />
       <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference\competitions\PCIC2022\code\0-default\track1_baseline\ref" />
       <recent name="D:\Learn_Software\PyCharm 2021.2\pythonProject\causal_inference\competitions\PCIC2022\code\0-default\sumbit" />
     </key>
@@ -125,7 +123,7 @@
       <workItem from="1666315690258" duration="25422000" />
       <workItem from="1666399975373" duration="12197000" />
       <workItem from="1666843423188" duration="1377000" />
-      <workItem from="1666927726640" duration="967000" />
+      <workItem from="1666927726640" duration="3054000" />
     </task>
     <task id="LOCAL-00001" summary="add a dir of panel causality">
       <created>1666012476025</created>
@@ -351,7 +349,42 @@
       <option name="project" value="LOCAL" />
       <updated>1666928054174</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update the dir of cross-section">
+      <created>1666929210356</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1666929210356</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update the dir.">
+      <created>1666929429689</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1666929429689</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update the dir.">
+      <created>1666930110436</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1666930110436</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update the dir.">
+      <created>1666930631271</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1666930631271</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update the dir of competitions.">
+      <created>1666930679972</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1666930679972</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +426,9 @@
     <MESSAGE value="create a dir of time-series" />
     <MESSAGE value="upload lectures of 5-6 in panel causality." />
     <MESSAGE value="update the dir of cross-section" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the dir of cross-section" />
+    <MESSAGE value="update the dir." />
+    <MESSAGE value="update the dir of competitions." />
+    <option name="LAST_COMMIT_MESSAGE" value="update the dir of competitions." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/causal_inference$data_clean.coverage" NAME="data_clean Coverage Results" MODIFIED="1666336901112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/competitions/PCIC2022/code/5-feature_engineering" />
